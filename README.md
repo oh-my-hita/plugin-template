@@ -129,20 +129,23 @@ class TemplateUiPlugin : ComposeUiPlugin {
 - 不能携带自己的 XML 资源表；UI 用 Compose 代码构建
 - 与宿主同进程，以宿主权限运行；只安装可信来源
 
-## 契约 AAR
+## Plugin SDK
 
-`libs/*.aar` 来自宿主构建：
+模板不携带 AAR 副本，统一从固定坐标解析：
 
-```bash
-# 在 OH-MY-HITA 仓库
-./gradlew :api:assembleRelease :model:assembleRelease :component:assembleRelease
-cp api/build/outputs/aar/api-release.aar \
-   model/build/outputs/aar/model-release.aar \
-   component/build/outputs/aar/component-release.aar  <本模板>/libs/
+```text
+io.github.kajimi16.ohmyhita:plugin-api:10
+io.github.kajimi16.ohmyhita:plugin-model:10
+io.github.kajimi16.ohmyhita:plugin-component:10
 ```
 
-社区仓库的发布工作流会在构建外部插件前自动注入自己 `libs/` 的最新 AAR，
-所以 fork 后 AAR 略旧仍可构建；本地开发仍建议手动同步。
+默认 SDK 仓库：
+
+```text
+https://raw.githubusercontent.com/kajimi16/plugin-sdk/master/maven
+```
+
+组织 `oh-my-hita` 建立后会转移到该组织，模板只需替换 URL。升级 API 时发布新的 SDK 版本，不覆盖旧版本。
 
 ## 本地调试
 

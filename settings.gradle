@@ -10,6 +10,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri(providers.gradleProperty("pluginSdkRepo").getOrElse(
+                "https://raw.githubusercontent.com/kajimi16/plugin-sdk/master/maven"
+            ))
+        }
     }
 }
 rootProject.name = "hita-plugin-template"
