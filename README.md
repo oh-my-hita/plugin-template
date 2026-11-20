@@ -142,7 +142,7 @@ io.github.kajimi16.ohmyhita:plugin-component:10
 默认 SDK 仓库：
 
 ```text
-https://raw.githubusercontent.com/kajimi16/plugin-sdk/master/maven
+https://raw.githubusercontent.com/oh-my-hita/plugin-sdk/master/maven
 ```
 
 组织 `oh-my-hita` 建立后会转移到该组织，模板只需替换 URL。升级 API 时发布新的 SDK 版本，不覆盖旧版本。
