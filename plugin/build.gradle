@@ -20,9 +20,7 @@ android {
 // 插件只"看见"契约：这些类在运行时由 OH-MY-HITA 提供，
 // 所以全部用 compileOnly，不能打进插件 dex。
 dependencies {
-    compileOnly 'io.github.kajimi16.ohmyhita:plugin-api:10'
-    compileOnly 'io.github.kajimi16.ohmyhita:plugin-model:10'
-    compileOnly 'io.github.kajimi16.ohmyhita:plugin-component:10' 
+    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:10.1' 
     compileOnly 'androidx.fragment:fragment:1.6.2'
     compileOnly 'androidx.lifecycle:lifecycle-livedata-core:2.8.4'
     compileOnly 'com.google.code.gson:gson:2.8.9'

@@ -134,9 +134,7 @@ class TemplateUiPlugin : ComposeUiPlugin {
 模板不携带 AAR 副本，统一从固定坐标解析：
 
 ```text
-io.github.kajimi16.ohmyhita:plugin-api:10
-io.github.kajimi16.ohmyhita:plugin-model:10
-io.github.kajimi16.ohmyhita:plugin-component:10
+io.github.kajimi16.ohmyhita:plugin-sdk:10.1
 ```
 
 默认 SDK 仓库：
