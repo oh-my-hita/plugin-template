@@ -16,13 +16,13 @@
 
 | 项 | 版本 |
 |---|---|
-| 宿主契约 | OH-MY-HITA API 6 |
-| Kotlin | 1.9.22 |
+| 宿主契约 | OH-MY-HITA API 10 |
+| Kotlin | 1.9.24 |
 | AGP | 8.5.2 |
-| Compose | 1.6.8 / compiler 1.5.8 |
+| Compose | 1.6.8 / compiler 1.5.14 |
 
-- 逻辑插件通常 `requiresApi = 2` 即可；使用 `TextNavEntry` / `ViewSearchTab` 等 API 5 契约时填 5；使用课表外观等 API 6 契约时填 6
-- 界面插件建议 `apiVersion = 6`，可使用多主界面 tab、自定义标题与图标
+- 逻辑插件通常 `requiresApi = 2` 即可；使用 `TextNavEntry` / `ViewSearchTab` 等 API 5 契约时填 5；使用课表外观等 API 6+ 契约时填对应版本；本模板默认演示 API 10
+- 界面插件默认 `apiVersion = 10`，可使用多主界面 tab、自定义标题与图标
 
 ## 快速开始
 
@@ -80,7 +80,7 @@ class DemoPlugin : Plugin {
 class TemplateUiPlugin : ComposeUiPlugin {
     override val id = "com.example.ui.template"
     override val displayName = "模板界面插件"
-    override val requiresApi = 6
+    override val requiresApi = 10
 
     override fun createView(context: Context, host: PluginUiHost): View =
         ComposeView(context).apply {
@@ -97,7 +97,7 @@ class TemplateUiPlugin : ComposeUiPlugin {
   "name": "模板界面插件",
   "version": "0.1.0",
   "entryClass": "com.example.ui.TemplateUiPlugin",
-  "apiVersion": 6,
+  "apiVersion": 10,
   "composeVersion": "1.6.8",
   "capabilities": ["hita.ui.mainTab"],
   "mainTabs": [

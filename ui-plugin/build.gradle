@@ -18,8 +18,8 @@ android {
         buildConfig = true
     }
     composeOptions {
-        // 与宿主 Kotlin 1.9.22 匹配
-        kotlinCompilerExtensionVersion '1.5.8'
+        // 与宿主 Kotlin 1.9.24 / Compose Compiler 1.5.14 匹配
+        kotlinCompilerExtensionVersion '1.5.14'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
