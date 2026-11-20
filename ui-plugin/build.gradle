@@ -30,7 +30,7 @@ android {
 
 // 界面插件：APK 文件由市场下载，宿主用 DexClassLoader 加载，Compose 由宿主提供运行时。
 dependencies {
-    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:10.1' 
+    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:11' 
     compileOnly 'androidx.compose.runtime:runtime:1.6.8'
     compileOnly 'androidx.compose.ui:ui:1.6.8'
     compileOnly 'androidx.compose.foundation:foundation:1.6.8'
